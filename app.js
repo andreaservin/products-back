@@ -24,7 +24,6 @@ app.use(express.json())
 
 app.get('/products', async (req, res) => {
   const products = await Product.find()
-  res.setHeader('Content-Type', 'application/json')
   res.json(products).end()
 })
 
